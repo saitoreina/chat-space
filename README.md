@@ -32,6 +32,7 @@ Things you may want to cover:
 |password|string|null: false|
 
 ###  Association
+- has_many :messages
 - has_many :members
 - has_many :groups, through: :members
 
@@ -54,10 +55,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
+- has_many :members
+- has_many :users, through: :members
 
 
 ## membersテーブル
